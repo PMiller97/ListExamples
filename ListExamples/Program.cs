@@ -73,20 +73,73 @@ namespace ListExamples
             //}
 
 
-            List<string> favFoods = new List<string> { "Steak", "Fish", "Pizza", "Ice Cream", "Nachos" };
+            //List<string> favFoods = new List<string> { "Steak", "Fish", "Pizza", "Ice Cream", "Nachos" };
 
-            if (favFoods.Contains("Steak"))
+            //if (favFoods.Contains("Steak"))
+            //    {
+            //    Console.WriteLine("I like steak too!!!");
+            //    }
+
+
+
+            ////Create a list with the following numbers: 1 23 9 77 922 6 32 63 14 5
+            ////use the contains method with the following values: 23 77 15
+            ////Remove these elements: 23 77 32 and 6
+            ////Use Contains() again on these values: 23 77 15
+            //List<int> numbers = new List<int> { 1, 23, 9, 77, 922, 6, 32, 63, 14, 5 };
+            //Console.WriteLine(numbers.Contains(23)); //sequence contains 23 -TRUE
+            //Console.WriteLine(numbers.Contains(77)); //conatins 77 - TRUE
+            //Console.WriteLine(numbers.Contains(15)); //does NOT contain 15 - FALSE
+
+            //numbers.Remove(23); //Removes 23 from sequence
+            //numbers.Remove(77); //Removes 77
+            //numbers.Remove(32); //Removes 32
+            //numbers.Remove(6); //Removes 6
+
+            //Console.WriteLine(numbers.Contains(23)); //23 was removed from the sequence so.. FALSE
+            //Console.WriteLine(numbers.Contains(77)); //77 was removed - FALSE
+            //Console.WriteLine(numbers.Contains(15)); //Never existed in the first place - FALSE
+
+
+
+
+            //ask the user for a movie
+            //if the movie is not in the list add it
+            //inform the user that the movie has been added
+            //if the user enters quit the program should exit
+            //the user should be able to add as many movies as they would like
+            //if the movie is in the list let the user know you have it
+
+            List<string> moviesGet = new List<string> { "Batman", "Spiderman", "Superman", "Wonder Women", "Hulk", "Iron Man" };
+            Console.WriteLine("What movie would you like to get?");
+            string movie = Console.ReadLine();
+            do
+            {
+
+                if (moviesGet.Contains(movie))
                 {
-                Console.WriteLine("I like steak too!!!");
+                    Console.WriteLine("I'm sorry, we do not have that movie. But your selection will be added within 3-5 days!");
+                    moviesGet.Add(movie);
                 }
-          
-           
-                
-           
-
+                else
+                {
+                    Console.WriteLine("Awesome! We have that movie for you!");
+                }
+            }
+                while (movie == "Quit");
+                Console.WriteLine("Thanks, come again!");
+                return;
+            
+            
             
 
-            
+
+
+
+
+
+
+
 
 
 
